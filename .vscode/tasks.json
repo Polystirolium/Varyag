@@ -9,9 +9,15 @@
                 "-g",
                 "-std=c++17",
                 "-I${workspaceFolder}/include",
+                "-L${env:GLFW_LIB}",
                 "${file}",
                 "-o",
-                "${fileDirname}\\varyag.exe"
+                "${fileDirname}\\varyag.exe",
+                "-lglfw3",
+                "-lopengl32", // Often needed for OpenGL projects
+                "-lgdi32", // Often needed on Windows
+                "-luser32", // Often needed on Windows
+                "-lkernel32" // Often needed on Windows
             ],
             "options": {
                 "cwd": "${fileDirname}"
