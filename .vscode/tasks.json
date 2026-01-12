@@ -11,7 +11,7 @@
                 "-I${workspaceFolder}/include",
                 "${file}",
                 "-o",
-                "${fileDirname}\\tribe.exe"
+                "${fileDirname}\\varyag.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
